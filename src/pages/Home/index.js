@@ -9,7 +9,7 @@ import Logo from '../../assets/IBGE.png';
 
 export default function Home() {
   const [name, setName] = useState('');
-  const [count, setCount] = useState(0);
+  const [nasc, setNasc] = useState('');
   const [data, setData] = useState('');
 
   async function handleName(name){
@@ -35,6 +35,14 @@ export default function Home() {
           placeholder='Seu promeiro nome aqui' 
           value={name}
           onChangeText={(name) => {setName(name);}} 
+          placeholderTextColor='#002663'/> 
+
+        <TextInput
+          type="number"
+          style={styles.Input}
+          placeholder='Seu ano de nascimento aqui' 
+          value={nasc}
+          onChangeText={(nasc) => {setNasc(nasc);}} 
           placeholderTextColor='#002663'/> 
 
         <TouchableOpacity
